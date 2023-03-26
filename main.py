@@ -32,8 +32,9 @@ while True:
     
     #Detect colision with the wall
     if snake.in_edge():
-        score_board.game_over()
-        break
+        score_board.reset()
+        snake.reset()
+        
     
     
     #Detect contact with the food
@@ -46,8 +47,10 @@ while True:
 
     #detect colision with the tail
     if snake.touch_tail():
-        score_board.game_over()
-        break
+        score_board.reset()
+        snake.reset()
+        
+        
         
     
     
