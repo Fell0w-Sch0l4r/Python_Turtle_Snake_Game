@@ -50,6 +50,17 @@ class Snake:
         for segment in tail:
             if segment.distance(self.head) < 5:
                 return True
+            
+            
+    def reset(self):
+        for segment in self.segments:
+            segment.setpos(1000, 1000)
+            
+        self.segments.clear()
+        
+        self.create_snake()
+        
+        self.head = self.segments[0]
 
     def right(self):
         if self.head.heading() != LEFT:
