@@ -1,3 +1,20 @@
+"""Main runner for the Turtle-based Snake game.
+
+This module creates the game window, initializes the game objects
+(`Snake`, `Food`, `ScoreBoard`) and runs the main game loop.
+
+Run:
+    python main.py
+
+Controls:
+    Arrow keys — move the snake (Up/Down/Left/Right)
+
+Files:
+    - snake.py: Snake implementation
+    - food.py: Food (inherits from `turtle.Turtle`)
+    - scoreboard.py: Score management and persistence to `HighScore.txt`
+"""
+
 from turtle import Screen
 from time import sleep
 from food import Food
